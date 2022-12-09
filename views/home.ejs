@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/home_style.css">
+    <script src="https://kit.fontawesome.com/6f0f83005a.js" crossorigin="anonymous"></script>
+    <title>Meet</title>
+</head>
+<body>
+    <div id="left-div">
+        <div id="root-div">
+            <div id="new-meeting-root">
+                <div id="start-meeting">
+                    <a href="/room">&emsp;<i class="fas fa-plus"></i>&nbsp;
+                    Meeting</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="enter-meeting-link">
+            <i class="fas fa-keyboard"></i>
+            <input type="text" name="link" placeholder="Enter meeting link" id="meeting-link-text-box">
+        </div>
+        <div id="join-button">Join</div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById('join-button').addEventListener('click', function() {
+        let input = document.getElementById('meeting-link-text-box').value;
+        window.location.assign(input);
+        document.getElementById('meeting-link-text-box').value = "";
+    });
+</script>
